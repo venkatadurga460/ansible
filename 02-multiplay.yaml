@@ -1,7 +1,6 @@
 - name: multiply 
   hosts: web
-  tasks: multiply run
+  tasks: 
   - name: multiply for 2 groups 1
     ansible.builtin.debug:
       msg: this is 1 runbook
-      
