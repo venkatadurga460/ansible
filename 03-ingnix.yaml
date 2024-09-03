@@ -9,6 +9,6 @@
 
   tasks:
   - name: run ngnix
-    ansible.builtin.services:
+    ansible.builtin.service:
       name: nginx
       state: prasent
