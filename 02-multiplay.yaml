@@ -4,3 +4,17 @@
   - name: multiply for 2 groups 1
     ansible.builtin.debug:
       msg: this is 1 runbook
+
+- name: mutlplay task 2
+  hosts: web
+  tasks:
+  - name: multiplay 2 group
+    ansible.builtin.debug:
+      msg: this is sencond run book
+
+- name: 3rd multiply
+  hosts: web
+  tasks:
+  - name: multiply 3
+    ansible.builtin.debug:
+      msg: 3rd run book
