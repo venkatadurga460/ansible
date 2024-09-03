@@ -6,3 +6,9 @@
     ansible.builtin.package:
       name: nginx
       state: installed
+
+  tasks:
+  - name: run ngnix
+    ansible.builtin.services:
+      name: nginx
+      state: prasent
