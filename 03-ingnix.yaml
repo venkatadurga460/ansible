@@ -5,7 +5,7 @@
   - name: install the ngnix software
     ansible.builtin.package:
       name: nginx
-      state: prasent
+      state: present
 
   - name: run ngnix
     ansible.builtin.service:
