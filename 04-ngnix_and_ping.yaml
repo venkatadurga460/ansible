@@ -1,8 +1,6 @@
 - name: ping
   hosts: web
   tasks:
-  - name: ping the server
-    ansible.builtin.ping:
   - name: install server
     ansible.builtin.package:
       name: ngnix
