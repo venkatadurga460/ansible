@@ -1,13 +1,13 @@
-- name: install nginx s/w
+- name: nginx install and run
   hosts: web
-  become: yes
+  become: yes #take sudo access
   tasks:
-  - name: install the ngnix software
-    ansible.builtin.package:
+  - name: install nginx
+    ansible.builtin.package: #heterongenous module that can work for all distros
       name: nginx
       state: present
-
-  - name: run ngnix
+  
+  - name: run nginx
     ansible.builtin.service:
       name: nginx
       state: started
