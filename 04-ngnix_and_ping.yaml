@@ -3,3 +3,7 @@
   tasks:
   - name: ping the server
     ansible.builtin.ping:
+  - name: install server
+    ansible.builtin.package:
+      name: ngnix
+      state: present
