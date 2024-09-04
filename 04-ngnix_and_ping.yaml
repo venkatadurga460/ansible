@@ -2,6 +2,4 @@
   hosts: web
   tasks:
   - name: install server
-    ansible.builtin.package:
-      name: ngnix
-      state: present
+    ansible.builtin.ping
