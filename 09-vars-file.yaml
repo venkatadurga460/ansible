@@ -1,0 +1,8 @@
+- name: Print the course detais
+  hosts: web
+  vars_file:
+  - vars.yaml
+  tasks:
+  - name: print the details
+    ansible.builtin.debug:
+      msg: "Hi, I am choosing {{COURSE}} duration will be {{DURATION}} and trainer {{TRAINER}} for better carrier"
