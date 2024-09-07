@@ -1,0 +1,27 @@
+- name: 
+  hosts: local
+  vars:
+    course : "devops with AWS"    #string
+    duration: "10hrs"
+    trainer: "Siva"
+    topics: 
+      - linux
+      - ansible
+      - terraform
+      - shell
+      - aws
+    live: true
+    tools:
+      ci: jenkins
+      cm: ansible
+      cloud: aws
+      aws:
+        - ec2
+        - s3
+        - es
+        - iam
+  tasks:
+    - name: print the info
+      ansible.builtin.debug:
+        msg: "Hi, I am learning {{ course }}, with duration: {{ duration }}, and trainer : {{ trainer }} topics are: {{ topics }}, and live: {{ live }}, tools are: {{ tools }}"
+
