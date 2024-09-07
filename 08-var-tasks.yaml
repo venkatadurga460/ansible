@@ -2,23 +2,21 @@
   hosts: web
   vars:
     COURSE: "Devops with ASW"
-    DURATION: 120HRS
-    TRAINER: Siva Kumar
+    DURATION: "120HRS"
+    TRAINER: "Siva Kumar"
   tasks: 
   - name: print the info
     ansible.builtin.debug:
       msg: "Hi, I am learning {{COURSE}}, duration {{DURATION}}, Trainer {{TRAINER}}"
 
-
-  - name:
+  - name: print info
     vars:
-      COURSE: Ansible
-      DURATION: 13HRS
+      COURSE: "Ansible"
     ansible.builtin.debug:
       msg: "Hi, I am learning {{COURSE}}, duration {{DURATION}}, Trainer {{TRAINER}}"
 
   - name: print the info again
-      ansible.builtin.debug:
-        msg: "Hi, I am learning {{COURSE}}, duration {{DURATION}}, Trainer {{TRAINER}}"
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{COURSE}}, duration {{DURATION}}, Trainer {{TRAINER}}"
     
 
