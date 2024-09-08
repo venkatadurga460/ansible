@@ -10,5 +10,7 @@
       loop:
       - nginx
       - mysql
+      - git
+      - maven
       - postfix
       - httpd
