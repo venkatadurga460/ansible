@@ -1,6 +1,7 @@
 - name: installing packages by using loops concept
   hosts: local
   connection: local
+  become: yes
   tasks:
     - name: installing below packages
       ansible.builtin.package:
