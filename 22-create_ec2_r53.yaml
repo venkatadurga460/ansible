@@ -33,6 +33,7 @@
     ansible.builtin.debug:
       msg: "{{ ec2_instances }}"
 
+#private IP R53
   - name: create r53 private records
     amazon.aws.route53:
       state: present
@@ -43,4 +44,4 @@
       value: "{{ item.instances[0].private_ip_address }}"
       wait: true
       overwrite: true
-    loop: "{{ ec2_instances.results }}" 
+    loop: "{{ ec2_instances.results }}"
